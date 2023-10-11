@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-
+import {Tasks} from "./components/Tasks";
 
 // Hi Guys!
 // Let's reinforce our current session!
 // -You have 2 arrays. You should create a new component TASKS, where you will render these arrays.
 // -Don't forget to assign types to our data.
-
-
 
 function App() {
     const data1 = {
@@ -64,7 +62,7 @@ function App() {
             'Ralphie Hebert',
         ]
     }
-    const data2 =   {
+    const data2 = {
         title: "What to learn",
         tasks: [
             {taskId: 1, title: "HTML&CSS", isDone: true},
@@ -126,37 +124,13 @@ function App() {
 
     return (
         <div className="App">
-234
+            <Tasks title={data1.title} tasks={data1.tasks} students={data1.students}/>
+            <Tasks title={data2.title} tasks={data2.tasks} students={data2.students}/>
         </div>
     );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //--------------------------------------------------------------
