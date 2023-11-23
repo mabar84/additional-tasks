@@ -49,6 +49,21 @@ export const Test = () => {
 // getMinLengthWord("Всем студентам инкубатора желаю удачи!") => "Всем"
 // getMinLengthWord("") => null
 // split()
+    const getMinLengthWord = (str) => {
+        if (str === '') return null
+        let res = str.split(' ')
+        let min = res[0]
+        for (let i = 0; i < res.length; i++) {
+            if (res[i].length < min.length) {
+                min = res[i]
+            }
+        }
+        return min
+    }
+    console.log('#4');
+    console.log(getMinLengthWord("Всем студентам инкубатора желаю удачи!"))
+    console.log(getMinLengthWord(''))
+
 
 //5. Реализуйте функцию, которая принимает параметром сторку (предложение) и возвращает то же предложение,
 // где все слова написаны строчными, но начинаются с заглавных букв.
