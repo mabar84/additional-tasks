@@ -10,6 +10,9 @@ export const NativeTuesday3 = () => {
 // repeatString("yo", 3, ",") => "yo,yo,yo"
 // for или str.repeat()
 
+
+    // const repeatString = (str, repeat, space) => repeat > 0 ? (str + space).repeat(repeat - 1) + str : '';
+
     const repeatString = (str, n, divider) => {
         let res = str
         for (let i = 1; i < n; i++) {
@@ -20,6 +23,7 @@ export const NativeTuesday3 = () => {
     console.log('#1')
     console.time('=====')
     console.log(repeatString("yo", 3, " "))
+
     console.timeEnd('=====')
     console.log(repeatString("yo", 3, " "))
     console.log(repeatString("yo", 3, ","))
@@ -100,7 +104,6 @@ export const NativeTuesday3 = () => {
 // isIncludes("Incubator", "inba") => true
 // isIncludes("Incubator", "Incubatorrr")=> true
 
-
     const isIncludes = (str, subStr) => {
         let set = new Set(str.toUpperCase().split(''))
         let subSet = new Set(subStr.toUpperCase().split(''))
@@ -119,9 +122,9 @@ export const NativeTuesday3 = () => {
         let subArr = subStr.toUpperCase().split('')
 
         arr = arr.filter(el => subArr.indexOf(el) >= 0)
-        console.log(arr)
+        // console.log(arr)
         subArr = subArr.filter(el => arr.indexOf(el) >= 0)
-        console.log(subArr)
+        // console.log(subArr)
         if (subArr.length > arr.length) return false
 
 
